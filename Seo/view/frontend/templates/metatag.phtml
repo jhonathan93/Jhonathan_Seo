@@ -1,0 +1,14 @@
+<?php
+
+use Jhonathan\Seo\Block\Metatag;
+
+/** @var $block Metatag */
+
+?>
+
+<?php $pages = $block->getInforMeta(); ?>
+<?php if ($pages): ?>
+    <?php foreach ($pages as $key => $value): ?>
+        <link rel="alternate" hreflang="<?= $value['locale']; ?>" href="<?= $value['PageUrl']; ?>" />
+    <?php endforeach;?>
+<?php endif; ?>

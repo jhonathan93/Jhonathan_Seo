@@ -36,7 +36,7 @@ class Metatag extends Template {
      */
     public function getInforMeta() {
         $pageId = $this->_page->getId();
-        if (!is_null($pageId)) { //Verifica ser o ID da CMS page existe
+        if ($pageId === NULL) { //Verifica ser o ID da CMS page existe
             return $this->createMeta($this->_db->getCmsPage($pageId));
         }
         return false;
@@ -49,12 +49,12 @@ class Metatag extends Template {
     private function createMeta(array $stores): array {
         if (in_array(0, $stores[0])) { //Verifica ser a CMS page está vinculada a loja de ID 0, Se verdade significar que a página está vinculada a todas as lojas..
             $stores = $this->_db->getAllStores();
-            if (sizeof($stores) > 1) { //Verifica ser o array tem mais de 1 elemento, se sim temos uma página vinculada a varias lojas...
+            if (count($stores) > 1) { //Verifica ser o array tem mais de 1 elemento, se sim temos uma página vinculada a varias lojas...
                 return $this->createArray($stores);
             }
         }
 
-        if (sizeof($stores) > 1) {
+        if (count($stores) > 1) {
             return $this->createArray($stores);
         }
         return [];

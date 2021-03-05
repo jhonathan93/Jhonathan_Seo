@@ -3,3 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e57314c16573a82fff0d/maintainability)](https://codeclimate.com/github/jhonathan93/Jhonathan_Seo/maintainability)
 ![GitHub top language](https://img.shields.io/github/languages/top/jhonathan93/Jhonathan_Seo?color=0023FF&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jhonathan93/Jhonathan_Seo?color=FF0000&style=plastic)
+![GitHub Size](https://img.shields.io/github/repo-size/jhonathan93/Jhonathan_Seo?color=D500FF)
